@@ -38,7 +38,18 @@ The main requirements are the following:
 
 
 ### Usage <a id="usage"></a>
-**TODO**
+1. Clone the repository
+   ```sh
+   git clone https://github.com/SimonReitzner/stats-ml-dl.git
+   ```
+2. Access subfolder
+   ```sh
+   cd stats-ml-dl
+   ```
+3. Get data
+   ```sh
+   python main_get_data.py
+   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
