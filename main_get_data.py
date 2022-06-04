@@ -28,7 +28,18 @@ class Data():
     def get_digits(self, file: str="digits.csv"):
         X, y = sklearn.datasets.load_digits(return_X_y=True, as_frame=True)
         df = pd.concat([y, X], axis=1)
-        df = df.reset_index(drop=False)
+        df = df.reset_index(drop=True)
+        df.to_csv(
+            file,
+            header=True,
+            sep=",",
+            index=False
+        )
+
+    def get_breast_cancer(self, file: str="breast_cancer.csv"):
+        X, y = sklearn.datasets.load_breast_cancer(return_X_y=True, as_frame=True)
+        df = pd.concat([y, X], axis=1)
+        df = df.reset_index(drop=True)
         df.to_csv(
             file,
             header=True,
@@ -41,3 +52,4 @@ if __name__ == "__main__":
     data.get_kidney_transplant()
     data.get_stock_prices()
     data.get_digits()
+    data.get_breast_cancer()
